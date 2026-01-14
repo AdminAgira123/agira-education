@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アギラ日本語研修センター - 日本語研修＆日本での就職プログラム</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', 'Noto Sans JP', sans-serif; scroll-behavior: smooth; }
+.warna-biru-agira { background-color: #004aad; }
+.teks-biru-agira { color: #004aad; }
+.overlay-hitam { background: rgba(0, 0, 0, 0.5); }
+.tombol-wa {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.tombol-wa:hover { transform: scale(1.1); }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAVIGATION -->
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="https://drive.google.com/thumbnail?id=1b67RXW2IaceACPnpWqc68j4UCF_CzY8e&sz=w500" 
+			alt="Logo Agira" 
+			class="h-16 mr-4 object-contain">
+            <div>
+                <span class="font-bold text-lg md:text-xl teks-biru-agira block">PT. AGIRA EDUCATION CENTER</span>
+                <span class="text-xs text-gray-500 font-semibold tracking-widest uppercase italic">アギラ日本語研修センター</span>
+            </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-8 font-semibold">
+
+  <!-- MENU -->
+  <div class="flex space-x-8">
+    <a href="#beranda" class="hover:text-blue-600 transition">ホーム</a>
+    <a href="#profil" class="hover:text-blue-600 transition">プロフィール</a>
+    <a href="#program" class="hover:text-blue-600 transition">プログラム</a>
+    <a href="#fasilitas" class="hover:text-blue-600 transition">設備</a>
+    <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+    <a href="#brosur" class="hover:text-blue-600 transition">パンフレット</a>
+    <a href="#kontak" class="hover:text-blue-600 transition">お問い合わせ</a>
+  </div>
+
+  <!-- DIVIDER -->
+  <span class="text-gray-300">|</span>
+
+  <!-- LANGUAGE SWITCH -->
+  <div class="flex space-x-3 text-sm font-bold">
+    <a href="index-in.html" class="hover:text-blue-600 transition">ID</a>
+    <a href="index-en.html" class="hover:text-blue-600 transition">EN</a>
+    <a href="index-jp.html" class="text-blue-600">JP</a>
+  </div>
+
+</div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="beranda" class="relative h-[550px] flex items-center text-white">
+    <div class="absolute inset-0 z-0">
+        <img src="https://drive.google.com/thumbnail?id=11unpQMJEoXj8LCJQoke0nBbI874-Sgic&sz=w1200" class="w-full h-full object-cover" alt="Background Agira">
+        <div class="absolute inset-0 overlay-hitam"></div>
+    </div>
+    <div class="container mx-auto px-6 relative z-10 text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+            未来のキャリアを築く <br>
+            <span class="text-blue-400">日本で働く</span>
+        </h1>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl">
+            効果的な方法で日本語を学び、日本で働く準備をサポートする語学教育機関。
+        </p>
+        <a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg transition duration-300">
+            今すぐお問い合わせ
+        </a>
+    </div>
+</section>
+
+<!-- PROFILE -->
+<section id="profil" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-wrap items-center">
+            <div class="w-full md:w-1/2 mb-10 md:mb-0">
+                <img src="https://drive.google.com/thumbnail?id=1n64kWFdMsYcX3x6ToNk17dWs-ZuY54Uq&sz=w1000" class="rounded-2xl shadow-2xl border-b-8 border-blue-600" alt="Students Agira">
+            </div>
+            <div class="w-full md:w-1/2 md:pl-16">
+                <h2 class="text-3xl font-bold teks-biru-agira mb-6">アギラ学舎について</h2>
+                <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+						PT. Agira Education Centerは、日本で働くことを目指す方のために、日本語の基礎教育および技能研修を行う教育機関です。民間研修制度（SO）や特定技能制度（SSW）を通じて、日本就労への第一歩をサポートしています。
+                </p>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-bullseye mt-1 text-blue-600 mr-4"></i>
+                        <p><b>ビジョン (Vision):</b> 日本基準に沿った能力と人格を備えた人材を育成。</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-double mt-1 text-blue-600 mr-4"></i>
+                        <p><b>ミッション (Mission):</b> 効果的な日本語教育と日本式の職業倫理を提供。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="program" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold teks-biru-agira">主なプログラム</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- SO -->
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition">
+                <div class="w-16 h-16 warna-biru-agira text-white rounded-2xl flex items-center justify-center text-3xl mb-6">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">民間技能実習</h3>
+                <ul class="space-y-4 text-gray-600">
+                    <li><i class="fas fa-circle-check text-green-500 mr-2"></i> 日本語研修 N5 – N4</li>
+                    <li><i class="fas fa-circle-check text-green-500 mr-2"></i> 初心者歓迎 (Zeroからスタート)</li>
+                    <li><i class="fas fa-circle-check text-green-500 mr-2"></i> 企業選考準備</li>
+                    <li><i class="fas fa-circle-check text-green-500 mr-2"></i> 研修期間: 2 – 3か月</li>
+                </ul>
+            </div>
+            <!-- SSW -->
+            <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition">
+                <div class="w-16 h-16 bg-red-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-6">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">特定技能 (SSW)</h3>
+                <ul class="space-y-4 text-gray-600">
+                    <li><i class="fas fa-circle-check text-green-500 mr-2"></i> 日本語 N4 & SSW研修</li>
+                    <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Zeroからの集中研修 + JFT & SSW対策</li>
+                    <li><i class="fas fa-circle-check text-green-500 mr-2"></i> 対象分野: 介護、食品加工、建設など</li>
+                    <li><i class="fas fa-circle-check text-green-500 mr-2"></i> 研修期間: 4 – 6か月</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FACILITIES -->
+<section id="fasilitas" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold teks-biru-agira mb-4">施設</h2>
+        <p class="text-gray-500 mb-12">快適で集中できる学習環境を提供。</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                <img src="https://drive.google.com/thumbnail?id=1Krqe03F-JEtJ2l6qakXiZV43WQUOnCe6&sz=w600" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="教室">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                    <span class="text-white font-bold text-lg">快適な教室</span>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                <img src="https://drive.google.com/thumbnail?id=1rqLUjB4uIqzwFyU1UO2AD_wEzdw_oHw_&sz=w600" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="寮">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                    <span class="text-white font-bold text-lg">男女別寮</span>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                <img src="https://drive.google.com/thumbnail?id=1u84s9vsBeRIBBaPDQvvCmUtC8NKyEwJ9&sz=w600" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="食堂">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                    <span class="text-white font-bold text-lg">食堂</span>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                <img src="https://drive.google.com/thumbnail?id=1duyzcOim-8aTaxbCzDyVo42P43K611NP&sz=w600" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="キッチン">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                    <span class="text-white font-bold text-lg">共同キッチン</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold teks-biru-agira">よくある質問 (FAQ)</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+      <p class="text-gray-600 mt-4 max-w-xl mx-auto">研修プログラムや日本での就職に関するよくある質問の回答をご覧ください。</p>
+    </div>
+
+    <div class="space-y-4 max-w-3xl mx-auto">
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
+          日本語が全くできなくても、研修プログラムに参加できますか？
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content px-6 py-4 hidden bg-gray-50 text-gray-700">
+          はい、民間研修プログラム（SO）および特定技能（SSW）は初心者向けに設計されています。ゼロから日本語学習と選考準備をサポートします。
+        </div>
+      </div>
+
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
+          特定技能（SSW）の研修期間はどのくらいですか？
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content px-6 py-4 hidden bg-gray-50 text-gray-700">
+          集中的な研修は約4〜6か月です。日本語N4 & SSW準備、職業マナー研修を含みます。
+        </div>
+      </div>
+
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
+          学生用の寮はありますか？
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content px-6 py-4 hidden bg-gray-50 text-gray-700">
+          はい、LPKアギラ学舎では男女別の寮を提供しており、安全で快適な環境です。
+        </div>
+      </div>
+
+      <div class="border rounded-lg overflow-hidden">
+        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
+          申し込み方法は？
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content px-6 py-4 hidden bg-gray-50 text-gray-700">
+          公式ウェブサイトに掲載されているWhatsAppリンクから直接お問い合わせください。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const toggles = document.querySelectorAll('.faq-toggle');
+toggles.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const content = btn.nextElementSibling;
+    content.classList.toggle('hidden');
+    btn.querySelector('i').classList.toggle('fa-chevron-down');
+    btn.querySelector('i').classList.toggle('fa-chevron-up');
+  });
+});
+</script>
+
+<!-- DOWNLOAD BROSUR -->
+<section id="brosur" class="py-20 bg-blue-50">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold teks-biru-agira mb-4">LPKアギラ学舎公式パンフレット</h2>
+    <p class="text-gray-600 max-w-xl mx-auto mb-8">
+      プログラム内容、施設情報、及び日本で働くための登録手順を確認するために、公式パンフレットをダウンロードできます。
+    </p>
+    <a href="https://drive.google.com/uc?export=download&id=1lT9-20qXx6Q4X5bkLm5UR6FtWR1vX9-m" target="_blank"
+       class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition">
+      パンフレットをダウンロード (PDF)
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT & FOOTER -->
+<footer id="kontak" class="bg-slate-900 text-white py-16">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-3 gap-12">
+      <!-- Logo & Description -->
+      <div>
+        <img src="https://drive.google.com/thumbnail?id=1b67RXW2IaceACPnpWqc68j4UCF_CzY8e&sz=w500" class="h-16 mb-6 brightness-125" alt="Logo Agira">
+        <p class="text-gray-400 mb-6">LPKアギラ学舎は、日本で働くための高いスキルと基準を持つ人材育成に力を入れています。</p>
+      </div>
+
+      <!-- Contact & Address -->
+      <div>
+        <h4 class="text-xl font-bold mb-6 border-b-2 border-blue-600 inline-block">お問い合わせ情報</h4>
+        <ul class="space-y-4 text-gray-400">
+          <li class="flex items-start">
+            <i class="fas fa-map-marker-alt mr-3 text-blue-500 mt-1"></i>
+            <span>
+              〒452-083, 西ジャワ州インドラマユ県カランガンペル区ジャヤラクサナ, Jl. Raya Jatibarang - Karangampel No.17
+            </span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-map mr-3 text-red-500"></i>
+            <a href="https://maps.app.goo.gl/gMzxE3qsfsPhpfSv9" target="_blank" class="hover:text-white transition underline">
+              Googleマップで見る
+            </a>
+          </li>
+          <li class="flex items-center">
+            <i class="fab fa-whatsapp mr-3 text-green-500"></i>
+            <a href="https://wa.me/qr/EO5M7DKO5VGNB1" target="_blank" class="hover:text-white transition">
+              登録お問い合わせ
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div>
+        <h4 class="text-xl font-bold mb-6 border-b-2 border-blue-600 inline-block">ソーシャルメディア</h4>
+        <div class="flex space-x-5 text-4xl">
+          <a href="https://www.facebook.com/share/1aSGqxsrJN/" class="hover:text-blue-500 transition"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://www.tiktok.com/@agira.gakkou" class="hover:text-pink-500 transition"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/agiragakkou?igsh=cjZ4bWZ1dmI3NnI3" class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+      <p>&copy; 2025 PT. Agira Education Center (LPKアギラ学舎). All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="tombol-wa"><i class="fab fa-whatsapp"></i></a>
+
+</body>
+</html>
