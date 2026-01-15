@@ -36,6 +36,9 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     transition: 0.3s;
 }
 .tombol-wa:hover { transform: scale(1.1); }
+
+/* Smooth scroll offset for sticky navbar */
+section { scroll-margin-top: 80px; }
 </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -45,45 +48,77 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center ml-0 md:-ml-10">
            <img src="https://drive.google.com/thumbnail?id=1b67RXW2IaceACPnpWqc68j4UCF_CzY8e&sz=w500"
-     alt="Logo Agira"
-    class="h-16 mr-4 object-contain">
+                alt="Logo Agira"
+                class="h-16 mr-4 object-contain">
             <div>
                 <div class="leading-tight">
-  <span class="font-bold text-base md:text-lg teks-biru-agira block">
-    PT. AGIRA EDUCATION CENTER
-  </span>
-  <span class="text-sm text-gray-500 italic">
-    LPK Agira Gakkou
-  </span>
-</div>
+                    <span class="font-bold text-base md:text-lg teks-biru-agira block">
+                        PT. AGIRA EDUCATION CENTER
+                    </span>
+                    <span class="text-sm text-gray-500 italic">
+                        LPK Agira Gakkou
+                    </span>
+                </div>
             </div>
         </div>
-       <div class="hidden md:flex items-center space-x-8 font-semibold">
 
-    <!-- MENU -->
-    <div class="flex space-x-8">
-        <a href="#beranda" class="hover:text-blue-600 transition">Beranda</a>
-        <a href="#profil" class="hover:text-blue-600 transition">Profil</a>
-        <a href="#program" class="hover:text-blue-600 transition">Program</a>
-        <a href="#fasilitas" class="hover:text-blue-600 transition">Fasilitas</a>
-        <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
-        <a href="#brosur" class="hover:text-blue-600 transition">Brosur</a>
-        <a href="#kontak" class="hover:text-blue-600 transition">Kontak</a>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 font-semibold">
+            <div class="flex space-x-8">
+                <a href="#beranda" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="#profil" class="hover:text-blue-600 transition">Profil</a>
+                <a href="#program" class="hover:text-blue-600 transition">Program</a>
+                <a href="#fasilitas" class="hover:text-blue-600 transition">Fasilitas</a>
+                <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+                <a href="#brosur" class="hover:text-blue-600 transition">Brosur</a>
+                <a href="#kontak" class="hover:text-blue-600 transition">Kontak</a>
+            </div>
+            <span class="text-gray-300">|</span>
+            <div class="flex space-x-3 text-sm font-bold">
+                <a href="index-in.html" class="text-blue-600">ID</a>
+                <a href="index-en.html" class="hover:text-blue-600">EN</a>
+                <a href="index-jp.html" class="hover:text-blue-600">JP</a>
+            </div>
+        </div>
+
+        <!-- Mobile Hamburger -->
+<div class="md:hidden relative">
+    <button id="hamburger-btn" class="text-gray-800 text-2xl focus:outline-none z-50">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-56 bg-white shadow-lg rounded-md overflow-hidden z-40">
+        <a href="#beranda" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Beranda</a>
+        <a href="#profil" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Profil</a>
+        <a href="#program" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Program</a>
+        <a href="#fasilitas" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Fasilitas</a>
+        <a href="#faq" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">FAQ</a>
+        <a href="#brosur" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Brosur</a>
+        <a href="#kontak" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Kontak</a>
+        <div class="border-t border-gray-200 mt-2 pt-2 px-4 flex space-x-3">
+            <a href="index-in.html" class="text-blue-600 font-bold">ID</a>
+            <a href="index-en.html" class="hover:text-blue-600 font-bold">EN</a>
+            <a href="index-jp.html" class="hover:text-blue-600 font-bold">JP</a>
+        </div>
     </div>
-
-    <!-- PEMBATAS -->
-    <span class="text-gray-300">|</span>
-
-    <!-- PILIHAN BAHASA -->
-    <div class="flex space-x-3 text-sm font-bold">
-        <a href="index-in.html" class="text-blue-600">ID</a>
-        <a href="index-en.html" class="hover:text-blue-600">EN</a>
-        <a href="index-jp.html" class="hover:text-blue-600">JP</a>
-    </div>
-
 </div>
 
-    </div>
+<!-- Script Mobile Menu -->
+<script>
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+hamburgerBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
+
+// Collapse menu ketika klik link
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+  });
+});
+</script>
 </nav>
 
 <!-- HERO SECTION -->
@@ -251,18 +286,6 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
   </div>
 </section>
 
-<script>
-const toggles = document.querySelectorAll('.faq-toggle');
-toggles.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const content = btn.nextElementSibling;
-    content.classList.toggle('hidden');
-    btn.querySelector('i').classList.toggle('fa-chevron-down');
-    btn.querySelector('i').classList.toggle('fa-chevron-up');
-  });
-});
-</script>
-
 <!-- DOWNLOAD BROSUR -->
 <section id="brosur" class="py-20 bg-blue-50">
   <div class="container mx-auto px-6 text-center">
@@ -328,6 +351,35 @@ toggles.forEach(btn => {
     </div>
   </div>
 </footer>
-</head>
+
+<!-- Tombol WhatsApp -->
+<a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="tombol-wa">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Script FAQ Toggle -->
+<script>
+const toggles = document.querySelectorAll('.faq-toggle');
+toggles.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const content = btn.nextElementSibling;
+    content.classList.toggle('hidden');
+    btn.querySelector('i').classList.toggle('fa-chevron-down');
+    btn.querySelector('i').classList.toggle('fa-chevron-up');
+  });
+});
+</script>
+
+<!-- Mobile Menu Collapse on Click -->
+<script>
+const mobileLinks = document.querySelectorAll('#menu a');
+const menuToggle = document.getElementById('menu-toggle');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.checked = false; // close mobile menu after click
+  });
+});
+</script>
+
+</body>
 </html>
-       
