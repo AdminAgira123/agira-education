@@ -42,48 +42,42 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 
 <!-- NAVIGASI -->
 <nav class="bg-white shadow-lg sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center ml-0 md:-ml-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-4 flex flex-col md:flex-row justify-between items-center">
+        <div class="flex items-center w-full md:w-auto mb-4 md:mb-0">
            <img src="https://drive.google.com/thumbnail?id=1b67RXW2IaceACPnpWqc68j4UCF_CzY8e&sz=w500"
      alt="Logo Agira"
     class="h-16 mr-4 object-contain">
             <div>
                 <div class="leading-tight">
-  <span class="font-bold text-base md:text-lg teks-biru-agira block">
-    PT. AGIRA EDUCATION CENTER
-  </span>
-  <span class="text-sm text-gray-500 italic">
-    LPK Agira Gakkou
-  </span>
-</div>
+                  <span class="font-bold text-base md:text-lg teks-biru-agira block">
+                    PT. AGIRA EDUCATION CENTER
+                  </span>
+                  <span class="text-sm text-gray-500 italic">
+                    LPK Agira Gakkou
+                  </span>
+                </div>
             </div>
         </div>
-       <div class="flex flex-wrap gap-4 font-semibold text-sm md:text-base">
 
+       <!-- MENU -->
+       <div class="w-full md:w-auto flex flex-col md:flex-row md:items-center gap-4 font-semibold text-sm md:text-base">
+           <div class="flex flex-col md:flex-row md:space-x-8 w-full md:w-auto">
+               <a href="#beranda" class="hover:text-blue-600 transition py-1 md:py-0">Beranda</a>
+               <a href="#profil" class="hover:text-blue-600 transition py-1 md:py-0">Profil</a>
+               <a href="#program" class="hover:text-blue-600 transition py-1 md:py-0">Program</a>
+               <a href="#fasilitas" class="hover:text-blue-600 transition py-1 md:py-0">Fasilitas</a>
+               <a href="#faq" class="hover:text-blue-600 transition py-1 md:py-0">FAQ</a>
+               <a href="#brosur" class="hover:text-blue-600 transition py-1 md:py-0">Brosur</a>
+               <a href="#kontak" class="hover:text-blue-600 transition py-1 md:py-0">Kontak</a>
+           </div>
 
-    <!-- MENU -->
-    <div class="flex space-x-8">
-        <a href="#beranda" class="hover:text-blue-600 transition">Beranda</a>
-        <a href="#profil" class="hover:text-blue-600 transition">Profil</a>
-        <a href="#program" class="hover:text-blue-600 transition">Program</a>
-        <a href="#fasilitas" class="hover:text-blue-600 transition">Fasilitas</a>
-        <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
-        <a href="#brosur" class="hover:text-blue-600 transition">Brosur</a>
-        <a href="#kontak" class="hover:text-blue-600 transition">Kontak</a>
-    </div>
-
-    <!-- PEMBATAS -->
-    <span class="text-gray-300">|</span>
-
-    <!-- PILIHAN BAHASA -->
-    <div class="flex space-x-3 text-sm font-bold">
-        <a href="index-in.html" class="text-blue-600">ID</a>
-        <a href="index-en.html" class="hover:text-blue-600">EN</a>
-        <a href="index-jp.html" class="hover:text-blue-600">JP</a>
-    </div>
-
-</div>
-
+           <!-- PILIHAN BAHASA -->
+           <div class="flex flex-row md:flex-row space-x-3 text-sm font-bold mt-2 md:mt-0">
+               <a href="index-in.html" class="text-blue-600">ID</a>
+               <a href="index-en.html" class="hover:text-blue-600">EN</a>
+               <a href="index-jp.html" class="hover:text-blue-600">JP</a>
+           </div>
+       </div>
     </div>
 </nav>
 
@@ -93,23 +87,23 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         <img src="https://drive.google.com/thumbnail?id=11unpQMJEoXj8LCJQoke0nBbI874-Sgic&sz=w1200" class="w-full h-full object-cover" alt="Background Agira">
         <div class="absolute inset-0 overlay-hitam"></div>
     </div>
-    <div class="container mx-auto px-6 relative z-10 text-center md:text-left">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">Wujudkan Karir Masa Depan <br><span class="text-blue-400">Kerja ke Jepang</span></h1>
-        <p class="text-lg md:text-xl mb-8 max-w-2xl">Lembaga pelatihan Bahasa Jepang dengan metode efektif dan pendampingan persiapan keberangkatan.</p>
-        <a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg transition duration-300">Hubungi Kami Sekarang</a>
+    <div class="container mx-auto px-4 sm:px-6 md:px-10 relative z-10 text-center md:text-left">
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Wujudkan Karir Masa Depan <br><span class="text-blue-400">Kerja ke Jepang</span></h1>
+        <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto md:mx-0">Lembaga pelatihan Bahasa Jepang dengan metode efektif dan pendampingan persiapan keberangkatan.</p>
+        <a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="bg-blue-600 hover:bg-blue-700 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-lg shadow-lg transition duration-300 inline-block">Hubungi Kami Sekarang</a>
     </div>
 </section>
 
 <!-- PROFIL LEMBAGA -->
-<section id="profil" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-        <div class="flex flex-wrap items-center">
-            <div class="w-full md:w-1/2 mb-10 md:mb-0">
-                <img src="https://drive.google.com/thumbnail?id=1n64kWFdMsYcX3x6ToNk17dWs-ZuY54Uq&sz=w1000" class="rounded-2xl shadow-2xl border-b-8 border-blue-600" alt="Siswa Agira">
+<section id="profil" class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 md:px-10">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                <img src="https://drive.google.com/thumbnail?id=1n64kWFdMsYcX3x6ToNk17dWs-ZuY54Uq&sz=w1000" class="rounded-2xl shadow-2xl border-b-8 border-blue-600 w-full h-auto object-cover" alt="Siswa Agira">
             </div>
-            <div class="w-full md:w-1/2 md:pl-16">
-                <h2 class="text-3xl font-bold teks-biru-agira mb-6">Tentang LPK Agira Gakkou</h2>
-                <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+            <div class="w-full md:w-1/2 md:pl-12">
+                <h2 class="text-2xl sm:text-3xl font-bold teks-biru-agira mb-6">Tentang LPK Agira Gakkou</h2>
+                <p class="text-gray-600 leading-relaxed mb-6 text-base sm:text-lg">
                     PT. Agira Education Center adalah lembaga pelatihan bahasa Jepang yang berfokus pada persiapan Bahasa Jepang dasar dan Skill sebagai langkah awal kerja ke Jepang melalui Program Magang Swasta (SO) dan Tokutei Ginou (SSW).
                 </p>
                 <div class="grid grid-cols-1 gap-4">
@@ -128,20 +122,20 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 </section>
 
 <!-- PROGRAM PELATIHAN -->
-<section id="program" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold teks-biru-agira">Program Unggulan</h2>
+<section id="program" class="py-16 md:py-20 bg-gray-50">
+    <div class="container mx-auto px-4 sm:px-6 md:px-10">
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-2xl sm:text-3xl md:text-3xl font-bold teks-biru-agira">Program Unggulan</h2>
             <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
         </div>
-        <div class="grid md:grid-cols-2 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             <!-- Program SO -->
-            <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition">
+            <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition">
                 <div class="w-16 h-16 warna-biru-agira text-white rounded-2xl flex items-center justify-center text-3xl mb-6">
                     <i class="fas fa-users"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">Program Magang Jepang Swasta (SO)</h3>
-                <ul class="space-y-4 text-gray-600">
+                <h3 class="text-xl sm:text-2xl font-bold mb-4">Program Magang Jepang Swasta (SO)</h3>
+                <ul class="space-y-2 sm:space-y-4 text-gray-600">
                     <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Pelatihan Bahasa Jepang N5 – N4</li>
                     <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Terbuka untuk pemula (Mulai dari Nol)</li>
                     <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Persiapan seleksi job perusahaan Jepang</li>
@@ -149,12 +143,12 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
                 </ul>
             </div>
             <!-- Program SSW -->
-            <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition">
+            <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition">
                 <div class="w-16 h-16 bg-red-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-6">
                     <i class="fas fa-user-tie"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">Tokutei Ginou (SSW)</h3>
-                <ul class="space-y-4 text-gray-600">
+                <h3 class="text-xl sm:text-2xl font-bold mb-4">Tokutei Ginou (SSW)</h3>
+                <ul class="space-y-2 sm:space-y-4 text-gray-600">
                     <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Pelatihan Bahasa Jepang N4 & SSW</li>
                     <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Pelatihan intensif dari NOL dan persiapan tes JFT & SSW</li>
                     <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Contoh Bidang: Kaigo, Food Processing, Konstruksi, dll</li>
@@ -166,31 +160,31 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 </section>
 
 <!-- FASILITAS -->
-<section id="fasilitas" class="py-20 bg-white">
-    <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold teks-biru-agira mb-4">Fasilitas Kami</h2>
-        <p class="text-gray-500 mb-12">Lingkungan belajar yang mendukung kenyamanan dan fokus siswa.</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<section id="fasilitas" class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 md:px-10 text-center">
+        <h2 class="text-2xl sm:text-3xl md:text-3xl font-bold teks-biru-agira mb-4">Fasilitas Kami</h2>
+        <p class="text-gray-500 mb-8 md:mb-12">Lingkungan belajar yang mendukung kenyamanan dan fokus siswa.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <div class="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src="https://drive.google.com/thumbnail?id=1Krqe03F-JEtJ2l6qakXiZV43WQUOnCe6&sz=w600" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="Ruang Kelas">
+                <img src="https://drive.google.com/thumbnail?id=1Krqe03F-JEtJ2l6qakXiZV43WQUOnCe6&sz=w600" class="w-full h-auto object-cover group-hover:scale-110 transition duration-500" alt="Ruang Kelas">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                     <span class="text-white font-bold text-lg">Ruang Kelas Nyaman</span>
                 </div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src="https://drive.google.com/thumbnail?id=1rqLUjB4uIqzwFyU1UO2AD_wEzdw_oHw_&sz=w600" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="Asrama">
+                <img src="https://drive.google.com/thumbnail?id=1rqLUjB4uIqzwFyU1UO2AD_wEzdw_oHw_&sz=w600" class="w-full h-auto object-cover group-hover:scale-110 transition duration-500" alt="Asrama">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                     <span class="text-white font-bold text-lg">Asrama Terpisah</span>
                 </div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src="https://drive.google.com/thumbnail?id=1u84s9vsBeRIBBaPDQvvCmUtC8NKyEwJ9&sz=w600" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="Kantin">
+                <img src="https://drive.google.com/thumbnail?id=1u84s9vsBeRIBBaPDQvvCmUtC8NKyEwJ9&sz=w600" class="w-full h-auto object-cover group-hover:scale-110 transition duration-500" alt="Kantin">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                     <span class="text-white font-bold text-lg">Kantin</span>
                 </div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src="https://drive.google.com/thumbnail?id=1duyzcOim-8aTaxbCzDyVo42P43K611NP&sz=w600" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="Dapur">
+                <img src="https://drive.google.com/thumbnail?id=1duyzcOim-8aTaxbCzDyVo42P43K611NP&sz=w600" class="w-full h-auto object-cover group-hover:scale-110 transition duration-500" alt="Dapur">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                     <span class="text-white font-bold text-lg">Dapur Bersama</span>
                 </div>
@@ -200,74 +194,60 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold teks-biru-agira">Pertanyaan Umum (FAQ)</h2>
+<section id="faq" class="py-16 md:py-20 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 md:px-10">
+    <div class="text-center mb-12 md:mb-16">
+      <h2 class="text-2xl sm:text-3xl md:text-3xl font-bold teks-biru-agira">Pertanyaan Umum (FAQ)</h2>
       <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
       <p class="text-gray-600 mt-4 max-w-xl mx-auto">Temukan jawaban dari pertanyaan yang sering diajukan seputar program dan pendaftaran kerja ke Jepang.</p>
     </div>
 
     <div class="space-y-4 max-w-3xl mx-auto">
-      <div class="border rounded-lg overflow-hidden">
-        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
+      <!-- FAQ Item -->
+      <details class="border rounded-lg overflow-hidden">
+        <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center bg-white">
           Apakah belum bisa dasar bahasa Jepang sama sekali bisa mendaftar program Magang maupun Tokutei Ginou?
           <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-content px-6 py-4 hidden bg-gray-50 text-gray-700">
-         Bisa, karena program Magang dan Tokutei Ginou (SSW) dirancang untuk pemula. Peserta akan dibimbing mulai dari nol sampai siap menghadapi seleksi dan bekerja di Jepang.
+        </summary>
+        <div class="px-6 py-4 bg-gray-50 text-gray-700">
+          Bisa, karena program Magang dan Tokutei Ginou (SSW) dirancang untuk pemula. Peserta akan dibimbing mulai dari nol sampai siap menghadapi seleksi dan bekerja di Jepang.
         </div>
-      </div>
-
-      <div class="border rounded-lg overflow-hidden">
-        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
+      </details>
+      <details class="border rounded-lg overflow-hidden">
+        <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center bg-white">
           Berapa lama durasi pelatihan Tokutei Ginou (SSW)?
           <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-content px-6 py-4 hidden bg-gray-50 text-gray-700">
+        </summary>
+        <div class="px-6 py-4 bg-gray-50 text-gray-700">
           Durasi pelatihan intensif sekitar 4–6 bulan, termasuk persiapan Bahasa Jepang N4 & SSW serta latihan etos kerja Jepang.
         </div>
-      </div>
-
-      <div class="border rounded-lg overflow-hidden">
-        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
+      </details>
+      <details class="border rounded-lg overflow-hidden">
+        <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center bg-white">
           Apakah ada fasilitas asrama untuk siswa?
           <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-content px-6 py-4 hidden bg-gray-50 text-gray-700">
+        </summary>
+        <div class="px-6 py-4 bg-gray-50 text-gray-700">
           Ya, LPK Agira menyediakan asrama terpisah untuk pria dan wanita dengan lingkungan nyaman dan aman.
         </div>
-      </div>
-
-      <div class="border rounded-lg overflow-hidden">
-        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
+      </details>
+      <details class="border rounded-lg overflow-hidden">
+        <summary class="px-6 py-4 cursor-pointer font-semibold flex justify-between items-center bg-white">
           Bagaimana cara mendaftar?
           <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="faq-content px-6 py-4 hidden bg-gray-50 text-gray-700">
+        </summary>
+        <div class="px-6 py-4 bg-gray-50 text-gray-700">
           Pendaftaran bisa langsung melalui kontak WhatsApp pada informasi kontak yang tertera di website.
         </div>
-      </div>
+      </details>
     </div>
   </div>
 </section>
 
-<script>
-const toggles = document.querySelectorAll('.faq-toggle');
-toggles.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const content = btn.nextElementSibling;
-    content.classList.toggle('hidden');
-    btn.querySelector('i').classList.toggle('fa-chevron-down');
-    btn.querySelector('i').classList.toggle('fa-chevron-up');
-  });
-});
-</script>
-
 <!-- DOWNLOAD BROSUR -->
-<section id="brosur" class="py-20 bg-blue-50">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold teks-biru-agira mb-4">Brosur Resmi LPK Agira Gakkou</h2>
+<section id="brosur" class="py-16 md:py-20 bg-blue-50">
+  <div class="container mx-auto px-4 sm:px-6 md:px-10 text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-3xl font-bold teks-biru-agira mb-4">Brosur Resmi LPK Agira Gakkou</h2>
     <p class="text-gray-600 max-w-xl mx-auto mb-8">
       Unduh brosur resmi untuk mengetahui detail program pelatihan, fasilitas, dan alur pendaftaran kerja ke Jepang.
     </p>
@@ -280,18 +260,18 @@ toggles.forEach(btn => {
 
 <!-- KONTAK & FOOTER -->
 <footer id="kontak" class="bg-slate-900 text-white py-16">
-  <div class="container mx-auto px-6">
-    <div class="grid md:grid-cols-3 gap-12">
+  <div class="container mx-auto px-4 sm:px-6 md:px-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
       <!-- Logo & Deskripsi -->
       <div>
         <img src="https://drive.google.com/thumbnail?id=1b67RXW2IaceACPnpWqc68j4UCF_CzY8e&sz=w500" class="h-16 mb-6 brightness-125" alt="Logo Agira">
-        <p class="text-gray-400 mb-6">Kami berdedikasi menciptakan SDM yang siap bersaing di pasar kerja Jepang dengan standar kompetensi tinggi.</p>
+        <p class="text-gray-400 mb-6 text-sm sm:text-base">Kami berdedikasi menciptakan SDM yang siap bersaing di pasar kerja Jepang dengan standar kompetensi tinggi.</p>
       </div>
 
       <!-- Kontak & Alamat -->
       <div>
         <h4 class="text-xl font-bold mb-6 border-b-2 border-blue-600 inline-block">Informasi Kontak</h4>
-        <ul class="space-y-4 text-gray-400">
+        <ul class="space-y-4 text-gray-400 text-sm sm:text-base">
           <li class="flex items-start">
             <i class="fas fa-map-marker-alt mr-3 text-blue-500 mt-1"></i>
             <span>
@@ -316,7 +296,7 @@ toggles.forEach(btn => {
       <!-- Media Sosial -->
       <div>
         <h4 class="text-xl font-bold mb-6 border-b-2 border-blue-600 inline-block">Media Sosial</h4>
-        <div class="flex space-x-5 text-4xl">
+        <div class="flex space-x-5 text-3xl sm:text-4xl">
           <a href="https://www.facebook.com/share/1aSGqxsrJN/" class="hover:text-blue-500 transition"><i class="fab fa-facebook-square"></i></a>
           <a href="https://www.tiktok.com/@agira.gakkou" class="hover:text-pink-500 transition"><i class="fab fa-tiktok"></i></a>
           <a href="https://www.instagram.com/agiragakkou?igsh=cjZ4bWZ1dmI3NnI3" class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
@@ -329,6 +309,11 @@ toggles.forEach(btn => {
     </div>
   </div>
 </footer>
-</head>
+
+<!-- Tombol WA -->
+<a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="tombol-wa">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
 </html>
-       
