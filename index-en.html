@@ -11,8 +11,6 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<!-- Bootstrap 5 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
@@ -38,79 +36,79 @@ body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     transition: 0.3s;
 }
 .tombol-wa:hover { transform: scale(1.1); }
-
-/* Scroll-margin-top agar section tidak tertutup navbar */
 section { scroll-margin-top: 80px; }
 </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<!-- NAVIGATION -->
+<!-- NAVBAR -->
 <nav class="bg-white shadow-lg sticky top-0 z-50">
-  <div class="container mx-auto px-6 py-4 d-flex justify-content-between align-items-center">
-
-    <!-- LOGO & NAMA -->
-    <div class="d-flex align-items-center ml-0 md:-ml-10">
-      <img src="https://drive.google.com/thumbnail?id=1b67RXW2IaceACPnpWqc68j4UCF_CzY8e&sz=w500"
-           alt="Logo Agira"
-           class="h-16 mr-4 object-contain">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center ml-0 md:-ml-10">
+      <img src="https://drive.google.com/thumbnail?id=1b67RXW2IaceACPnpWqc68j4UCF_CzY8e&sz=w500" alt="Logo Agira" class="h-16 mr-4 object-contain">
       <div>
         <div class="leading-tight">
-          <span class="font-bold text-base md:text-lg teks-biru-agira block">
-            PT. AGIRA EDUCATION CENTER
-          </span>
-          <span class="text-sm text-gray-500 italic">
-            LPK Agira Gakkou
-          </span>
+          <span class="font-bold text-base md:text-lg teks-biru-agira block">PT. AGIRA EDUCATION CENTER</span>
+          <span class="text-sm text-gray-500 italic">LPK Agira Gakkou</span>
         </div>
       </div>
     </div>
 
-    <!-- HAMBURGER MOBILE -->
-    <button class="navbar-toggler d-md-none btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-      <i class="fas fa-bars"></i>
-    </button>
+    <!-- DESKTOP MENU -->
+    <div class="hidden md:flex items-center space-x-8 font-semibold">
+      <div class="flex space-x-8">
+        <a href="#beranda" class="hover:text-blue-600 transition">Home</a>
+        <a href="#profil" class="hover:text-blue-600 transition">Profile</a>
+        <a href="#program" class="hover:text-blue-600 transition">Programs</a>
+        <a href="#fasilitas" class="hover:text-blue-600 transition">Facilities</a>
+        <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+        <a href="#brosur" class="hover:text-blue-600 transition">Brochure</a>
+        <a href="#kontak" class="hover:text-blue-600 transition">Contact</a>
+      </div>
+      <span class="text-gray-300">|</span>
+      <div class="flex space-x-3 text-sm font-bold">
+        <a href="index-in.html">ID</a>
+        <a href="index-en.html" class="text-blue-600">EN</a>
+        <a href="index-jp.html">JP</a>
+      </div>
+    </div>
 
-    <!-- MENU -->
-    <div class="collapse d-md-flex justify-content-between align-items-center w-100" id="navbarContent">
-      <div class="d-flex flex-column flex-md-row align-items-md-center w-100">
-        <div class="d-flex flex-column flex-md-row align-items-md-center mx-auto space-x-3">
-          <a href="#beranda" class="nav-link px-2">Home</a>
-          <a href="#profil" class="nav-link px-2">Profile</a>
-          <a href="#program" class="nav-link px-2">Programs</a>
-          <a href="#fasilitas" class="nav-link px-2">Facilities</a>
-          <a href="#faq" class="nav-link px-2">FAQ</a>
-          <a href="#brosur" class="nav-link px-2">Brochure</a>
-          <a href="#kontak" class="nav-link px-2">Contact</a>
-        </div>
+    <!-- MOBILE MENU BUTTON -->
+    <div class="md:hidden">
+      <button id="menu-button" class="text-gray-800 focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </div>
 
-        <!-- BAHASA -->
-        <div class="d-flex flex-row mt-3 mt-md-0 ms-md-4 text-sm font-bold">
-          <a href="index-in.html" class="me-2">ID</a>
-          <a href="index-en.html" class="me-2 text-blue-600">EN</a>
-          <a href="index-jp.html">JP</a>
-        </div>
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+    <div class="flex flex-col px-6 py-4 space-y-4 font-semibold">
+      <a href="#beranda" class="hover:text-blue-600 transition">Home</a>
+      <a href="#profil" class="hover:text-blue-600 transition">Profile</a>
+      <a href="#program" class="hover:text-blue-600 transition">Programs</a>
+      <a href="#fasilitas" class="hover:text-blue-600 transition">Facilities</a>
+      <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+      <a href="#brosur" class="hover:text-blue-600 transition">Brochure</a>
+      <a href="#kontak" class="hover:text-blue-600 transition">Contact</a>
+      <div class="flex space-x-3 text-sm font-bold pt-2">
+        <a href="index-in.html">ID</a>
+        <a href="index-en.html" class="text-blue-600">EN</a>
+        <a href="index-jp.html">JP</a>
       </div>
     </div>
   </div>
 </nav>
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="tombol-wa" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<!-- HERO SECTION -->
-<section id="beranda" class="relative h-[550px] d-flex align-items-center text-white">
+<!-- HERO -->
+<section id="beranda" class="relative h-[550px] flex items-center text-white">
   <div class="absolute inset-0 z-0">
     <img src="https://drive.google.com/thumbnail?id=11unpQMJEoXj8LCJQoke0nBbI874-Sgic&sz=w1200" class="w-full h-full object-cover" alt="Background Agira">
     <div class="absolute inset-0 overlay-hitam"></div>
   </div>
   <div class="container mx-auto px-6 relative z-10 text-center md:text-left">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Build Your Future Career <br><span class="text-blue-400">Work in Japan</span></h1>
-    <p class="text-lg md:text-xl mb-8 max-w-2xl">
-      A Japanese language training center with effective methods and professional guidance to prepare you for working in Japan.
-    </p>
+    <p class="text-lg md:text-xl mb-8 max-w-2xl">A Japanese language training center with effective methods and professional guidance to prepare you for working in Japan.</p>
     <a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg transition duration-300">Contact Us Now</a>
   </div>
 </section>
@@ -118,22 +116,20 @@ section { scroll-margin-top: 80px; }
 <!-- PROFILE -->
 <section id="profil" class="py-20 bg-white">
   <div class="container mx-auto px-6">
-    <div class="d-flex flex-column flex-md-row align-items-center">
-      <div class="w-100 w-md-50 mb-10 mb-md-0">
-        <img src="https://drive.google.com/thumbnail?id=1n64kWFdMsYcX3x6ToNk17dWs-ZuY54Uq&sz=w1000" class="rounded-2xl shadow-2xl border-bottom border-4 border-blue-600" alt="Students Agira">
+    <div class="flex flex-wrap items-center">
+      <div class="w-full md:w-1/2 mb-10 md:mb-0">
+        <img src="https://drive.google.com/thumbnail?id=1n64kWFdMsYcX3x6ToNk17dWs-ZuY54Uq&sz=w1000" class="rounded-2xl shadow-2xl border-b-8 border-blue-600" alt="Students Agira">
       </div>
-      <div class="w-100 w-md-50 ps-md-5">
+      <div class="w-full md:w-1/2 md:pl-16">
         <h2 class="text-3xl font-bold teks-biru-agira mb-6">About LPK Agira Gakkou</h2>
-        <p class="text-gray-600 mb-6 text-lg">
-          PT. Agira Education Center is a Japanese language training institution focused on basic Japanese language skills as the first step toward working in Japan through the Private Internship Program (SO) and Tokutei Ginou (SSW).
-        </p>
-        <div class="d-grid gap-3">
-          <div class="d-flex align-items-start">
-            <i class="fas fa-bullseye mt-1 text-blue-600 me-3"></i>
+        <p class="text-gray-600 leading-relaxed mb-6 text-lg">PT. Agira Education Center is a Japanese language training institution focused on basic Japanese language skills as the first step toward working in Japan through the Private Internship Program (SO) and Tokutei Ginou (SSW).</p>
+        <div class="grid grid-cols-1 gap-4">
+          <div class="flex items-start">
+            <i class="fas fa-bullseye mt-1 text-blue-600 mr-4"></i>
             <p><b>Vision:</b> Produce competent and professional human resources in accordance with Japanese standards.</p>
           </div>
-          <div class="d-flex align-items-start">
-            <i class="fas fa-check-double mt-1 text-blue-600 me-3"></i>
+          <div class="flex items-start">
+            <i class="fas fa-check-double mt-1 text-blue-600 mr-4"></i>
             <p><b>Mission:</b> Provide Japanese language training and work ethic coaching effectively.</p>
           </div>
         </div>
@@ -149,31 +145,31 @@ section { scroll-margin-top: 80px; }
       <h2 class="text-3xl font-bold teks-biru-agira">Featured Programs</h2>
       <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
     </div>
-    <div class="d-grid gap-10 d-md-grid-cols-2">
+    <div class="grid md:grid-cols-2 gap-10">
       <!-- SO -->
       <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition">
-        <div class="w-16 h-16 warna-biru-agira text-white rounded-2xl d-flex align-items-center justify-content-center text-3xl mb-6">
+        <div class="w-16 h-16 warna-biru-agira text-white rounded-2xl flex items-center justify-center text-3xl mb-6">
           <i class="fas fa-users"></i>
         </div>
         <h3 class="text-2xl font-bold mb-4">Private Internship Program (SO)</h3>
         <ul class="space-y-4 text-gray-600">
-          <li><i class="fas fa-circle-check text-green-500 me-2"></i> Japanese Language Training N5 – N4</li>
-          <li><i class="fas fa-circle-check text-green-500 me-2"></i> Open for Beginners</li>
-          <li><i class="fas fa-circle-check text-green-500 me-2"></i> Preparation for Japanese Company Job Selection</li>
-          <li><i class="fas fa-circle-check text-green-500 me-2"></i> Training Duration: 2 – 3 Months</li>
+          <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Japanese Language Training N5 – N4</li>
+          <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Open for Beginners</li>
+          <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Preparation for Japanese Company Job Selection</li>
+          <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Training Duration: 2 – 3 Months</li>
         </ul>
       </div>
       <!-- SSW -->
       <div class="bg-white p-8 rounded-3xl shadow-md border border-gray-100 hover:shadow-xl transition">
-        <div class="w-16 h-16 bg-red-600 text-white rounded-2xl d-flex align-items-center justify-content-center text-3xl mb-6">
+        <div class="w-16 h-16 bg-red-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-6">
           <i class="fas fa-user-tie"></i>
         </div>
         <h3 class="text-2xl font-bold mb-4">Tokutei Ginou (SSW)</h3>
         <ul class="space-y-4 text-gray-600">
-          <li><i class="fas fa-circle-check text-green-500 me-2"></i> Japanese Language N4 & SSW Training</li>
-          <li><i class="fas fa-circle-check text-green-500 me-2"></i> Intensive training from zero and preparation for JFT & SSW</li>
-          <li><i class="fas fa-circle-check text-green-500 me-2"></i> Example Fields: Caregiver, Food Processing, Construction, etc</li>
-          <li><i class="fas fa-circle-check text-green-500 me-2"></i> Training Duration: 4 - 6 months</li>
+          <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Japanese Language N4 & SSW Training</li>
+          <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Intensive training from zero and preparation for JFT & SSW</li>
+          <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Example Fields: Caregiver, Food Processing, Construction, etc</li>
+          <li><i class="fas fa-circle-check text-green-500 mr-2"></i> Training Duration: 4 - 6 months</li>
         </ul>
       </div>
     </div>
@@ -225,7 +221,7 @@ section { scroll-margin-top: 80px; }
 
     <div class="space-y-4 max-w-3xl mx-auto">
       <div class="border rounded-lg overflow-hidden">
-        <button class="w-full text-left px-6 py-4 bg-white font-semibold d-flex justify-content-between align-items-center faq-toggle">
+        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
           Can beginners with no Japanese language skills register for the Internship or Tokutei Ginou program?
           <i class="fas fa-chevron-down"></i>
         </button>
@@ -233,8 +229,9 @@ section { scroll-margin-top: 80px; }
           Yes, the Internship and Tokutei Ginou (SSW) programs are designed for beginners. Participants will be guided from zero until ready for selection and work in Japan.
         </div>
       </div>
+
       <div class="border rounded-lg overflow-hidden">
-        <button class="w-full text-left px-6 py-4 bg-white font-semibold d-flex justify-content-between align-items-center faq-toggle">
+        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
           How long is the Tokutei Ginou (SSW) training duration?
           <i class="fas fa-chevron-down"></i>
         </button>
@@ -242,8 +239,9 @@ section { scroll-margin-top: 80px; }
           The intensive training lasts approximately 4–6 months, including Japanese N4 & SSW preparation and Japanese work ethic training.
         </div>
       </div>
+
       <div class="border rounded-lg overflow-hidden">
-        <button class="w-full text-left px-6 py-4 bg-white font-semibold d-flex justify-content-between align-items-center faq-toggle">
+        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
           Are dormitory facilities available for students?
           <i class="fas fa-chevron-down"></i>
         </button>
@@ -251,8 +249,9 @@ section { scroll-margin-top: 80px; }
           Yes, LPK Agira provides separate dormitories for male and female students in a safe and comfortable environment.
         </div>
       </div>
+
       <div class="border rounded-lg overflow-hidden">
-        <button class="w-full text-left px-6 py-4 bg-white font-semibold d-flex justify-content-between align-items-center faq-toggle">
+        <button class="w-full text-left px-6 py-4 bg-white font-semibold flex justify-between items-center faq-toggle">
           How to register?
           <i class="fas fa-chevron-down"></i>
         </button>
@@ -264,7 +263,7 @@ section { scroll-margin-top: 80px; }
   </div>
 </section>
 
-<!-- DOWNLOAD BROCHURE -->
+<!-- BROCHURE -->
 <section id="brosur" class="py-20 bg-blue-50">
   <div class="container mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold teks-biru-agira mb-4">Official Brochure</h2>
@@ -278,7 +277,7 @@ section { scroll-margin-top: 80px; }
   </div>
 </section>
 
-<!-- CONTACT & FOOTER -->
+<!-- CONTACT -->
 <footer id="kontak" class="bg-slate-900 text-white py-16">
   <div class="container mx-auto px-6">
     <div class="grid md:grid-cols-3 gap-12">
@@ -286,45 +285,48 @@ section { scroll-margin-top: 80px; }
         <img src="https://drive.google.com/thumbnail?id=1b67RXW2IaceACPnpWqc68j4UCF_CzY8e&sz=w500" class="h-16 mb-6 brightness-125" alt="Logo Agira">
         <p class="text-gray-400 mb-6">We are dedicated to creating human resources ready to compete in the Japanese job market with high competence standards.</p>
       </div>
+
       <div>
         <h4 class="text-xl font-bold mb-6 border-b-2 border-blue-600 inline-block">Contact Information</h4>
         <ul class="space-y-4 text-gray-400">
-          <li class="d-flex align-items-start">
-            <i class="fas fa-map-marker-alt me-3 text-blue-500 mt-1"></i>
+          <li class="flex items-start">
+            <i class="fas fa-map-marker-alt mr-3 text-blue-500 mt-1"></i>
             <span>
               Jl. Raya Jatibarang - Karangampel No.17, RT.29/RW.06, Jayalaksana, Kec. Karangampel, Kabupaten Indramayu, Jawa Barat 45283
             </span>
           </li>
-          <li class="d-flex align-items-center">
-            <i class="fas fa-map me-3 text-red-500"></i>
+          <li class="flex items-center">
+            <i class="fas fa-map mr-3 text-red-500"></i>
             <a href="https://maps.app.goo.gl/gMzxE3qsfsPhpfSv9" target="_blank" class="hover:text-white transition underline">
               View Location on Google Maps
             </a>
           </li>
-          <li class="d-flex align-items-center">
-            <i class="fab fa-whatsapp me-3 text-green-500"></i>
+          <li class="flex items-center">
+            <i class="fab fa-whatsapp mr-3 text-green-500"></i>
             <a href="https://wa.me/qr/EO5M7DKO5VGNB1" target="_blank" class="hover:text-white transition">
               Registration Contact
             </a>
           </li>
         </ul>
       </div>
+
       <div>
         <h4 class="text-xl font-bold mb-6 border-b-2 border-blue-600 inline-block">Social Media</h4>
-        <div class="d-flex gap-3 fs-4">
+        <div class="flex space-x-5 text-4xl">
           <a href="https://www.facebook.com/share/1aSGqxsrJN/" class="hover:text-blue-500 transition"><i class="fab fa-facebook-square"></i></a>
           <a href="https://www.tiktok.com/@agira.gakkou" class="hover:text-pink-500 transition"><i class="fab fa-tiktok"></i></a>
           <a href="https://www.instagram.com/agiragakkou?igsh=cjZ4bWZ1dmI3NnI3" class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </div>
+
     <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
       <p>&copy; 2025 PT. Agira Education Center (LPK Agira Gakkou). All Rights Reserved.</p>
     </div>
   </div>
 </footer>
 
-<!-- FAQ Script -->
+<!-- SCRIPTS -->
 <script>
 const toggles = document.querySelectorAll('.faq-toggle');
 toggles.forEach(btn => {
@@ -335,9 +337,14 @@ toggles.forEach(btn => {
     btn.querySelector('i').classList.toggle('fa-chevron-up');
   });
 });
+
+// MOBILE MENU TOGGLE
+const menuButton = document.getElementById('menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+menuButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
 </script>
 
-<!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
