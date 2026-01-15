@@ -5,30 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LPK Agira Gakkou - Pelatihan Bahasa Jepang & Program Kerja Jepang</title>
 
-<!-- Bootstrap 5 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
-
 <!-- Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body { 
-  font-family: 'Inter', sans-serif; 
-  scroll-behavior: smooth; 
-}
-
-/* Navbar warna Agira */
+body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 .warna-biru-agira { background-color: #004aad; }
 .teks-biru-agira { color: #004aad; }
 .overlay-hitam { background: rgba(0, 0, 0, 0.5); }
-
-/* Tombol WhatsApp */
 .tombol-wa {
     position: fixed;
     bottom: 25px;
@@ -49,132 +37,168 @@ body {
 }
 .tombol-wa:hover { transform: scale(1.1); }
 
-/* Section scroll margin agar tidak tertutup navbar */
+/* Set margin-top untuk scroll agar tidak tertutup navbar */
 section { scroll-margin-top: 80px; }
 </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg sticky-top">
-  <div class="container-fluid px-4 md:px-10">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="https://drive.google.com/thumbnail?id=1b67RXW2IaceACPnpWqc68j4UCF_CzY8e&sz=w500" 
-           alt="Logo Agira" class="h-12 sm:h-16 me-2">
-      <div class="d-none d-lg-block">
-        <div class="leading-tight">
-          <span class="font-bold text-base sm:text-lg teks-biru-agira block">PT. AGIRA EDUCATION CENTER</span>
-          <span class="text-sm text-gray-500 italic">LPK Agira Gakkou</span>
+<!-- NAVIGASI -->
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo & Nama -->
+        <div class="flex items-center">
+           <img src="https://drive.google.com/thumbnail?id=1b67RXW2IaceACPnpWqc68j4UCF_CzY8e&sz=w500"
+     alt="Logo Agira"
+    class="h-16 mr-4 object-contain">
+            <div>
+                <div class="leading-tight">
+  <span class="font-bold text-base md:text-lg teks-biru-agira block">
+    PT. AGIRA EDUCATION CENTER
+  </span>
+  <span class="text-sm text-gray-500 italic">
+    LPK Agira Gakkou
+  </span>
+</div>
+            </div>
         </div>
-      </div>
-      <span class="d-lg-none font-bold teks-biru-agira">LPK Agira Gakkou</span>
-    </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 font-semibold">
+            <div class="flex space-x-8">
+                <a href="#beranda" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="#profil" class="hover:text-blue-600 transition">Profil</a>
+                <a href="#program" class="hover:text-blue-600 transition">Program</a>
+                <a href="#fasilitas" class="hover:text-blue-600 transition">Fasilitas</a>
+                <a href="#faq" class="hover:text-blue-600 transition">FAQ</a>
+                <a href="#brosur" class="hover:text-blue-600 transition">Brosur</a>
+                <a href="#kontak" class="hover:text-blue-600 transition">Kontak</a>
+            </div>
+            <span class="text-gray-300">|</span>
+            <div class="flex space-x-3 text-sm font-bold">
+                <a href="index-in.html" class="text-blue-600">ID</a>
+                <a href="index-en.html" class="hover:text-blue-600">EN</a>
+                <a href="index-jp.html" class="hover:text-blue-600">JP</a>
+            </div>
+        </div>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto font-semibold">
-        <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
-        <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
-        <li class="nav-item"><a class="nav-link" href="#fasilitas">Fasilitas</a></li>
-        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-        <li class="nav-item"><a class="nav-link" href="#brosur">Brosur</a></li>
-        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-      </ul>
-      <div class="d-flex ms-lg-3 mt-2 mt-lg-0">
-        <a href="index-in.html" class="text-blue-600 fw-bold me-2">ID</a>
-        <a href="index-en.html" class="fw-bold me-2">EN</a>
-        <a href="index-jp.html" class="fw-bold">JP</a>
-      </div>
+        <!-- Hamburger Mobile -->
+        <div class="md:hidden relative">
+            <button id="hamburger-btn" class="text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div id="mobile-menu" class="absolute right-0 mt-2 w-56 bg-white shadow-lg rounded-md overflow-hidden hidden z-50">
+                <a href="#beranda" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Beranda</a>
+                <a href="#profil" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Profil</a>
+                <a href="#program" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Program</a>
+                <a href="#fasilitas" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Fasilitas</a>
+                <a href="#faq" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">FAQ</a>
+                <a href="#brosur" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Brosur</a>
+                <a href="#kontak" class="block px-4 py-2 border-b border-gray-200 hover:bg-gray-100">Kontak</a>
+                <div class="border-t border-gray-200 mt-2 pt-2 px-4 flex space-x-3">
+                    <a href="index-in.html" class="text-blue-600 font-bold">ID</a>
+                    <a href="index-en.html" class="hover:text-blue-600 font-bold">EN</a>
+                    <a href="index-jp.html" class="hover:text-blue-600 font-bold">JP</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </nav>
 
 <!-- HERO SECTION -->
 <section id="beranda" class="relative h-[550px] flex items-center text-white">
-  <div class="absolute inset-0 z-0">
-    <img src="https://drive.google.com/thumbnail?id=11unpQMJEoXj8LCJQoke0nBbI874-Sgic&sz=w1200" class="w-full h-full object-cover" alt="Background Agira">
-    <div class="absolute inset-0 overlay-hitam"></div>
-  </div>
-  <div class="container mx-auto px-4 sm:px-6 md:px-10 relative z-10 text-center md:text-left">
-    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Wujudkan Karir Masa Depan <br><span class="text-blue-400">Kerja ke Jepang</span></h1>
-    <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto md:mx-0">Lembaga pelatihan Bahasa Jepang dengan metode efektif dan pendampingan persiapan keberangkatan.</p>
-    <a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="bg-blue-600 hover:bg-blue-700 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-lg shadow-lg transition duration-300 inline-block">Hubungi Kami Sekarang</a>
-  </div>
-</section>
-
-<!-- PROFIL -->
-<section id="profil" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="flex flex-wrap items-center">
-      <div class="w-full md:w-1/2 mb-10 md:mb-0">
-        <img src="https://drive.google.com/thumbnail?id=1n64kWFdMsYcX3x6ToNk17dWs-ZuY54Uq&sz=w1000" class="rounded-2xl shadow-2xl border-b-8 border-blue-600" alt="Siswa Agira">
-      </div>
-      <div class="w-full md:w-1/2 md:pl-16">
-        <h2 class="text-3xl font-bold teks-biru-agira mb-6">Tentang LPK Agira Gakkou</h2>
-        <p class="text-gray-600 leading-relaxed mb-6 text-lg">
-          PT. Agira Education Center adalah lembaga pelatihan bahasa Jepang yang berfokus pada persiapan Bahasa Jepang dasar dan Skill sebagai langkah awal kerja ke Jepang melalui Program Magang Swasta (SO) dan Tokutei Ginou (SSW).
-        </p>
-        <div class="grid grid-cols-1 gap-4">
-          <div class="flex items-start">
-            <i class="fas fa-bullseye mt-1 text-blue-600 mr-4"></i>
-            <p><b>Visi:</b> Mencetak SDM kompeten dan berkarakter standar Jepang.</p>
-          </div>
-          <div class="flex items-start">
-            <i class="fas fa-check-double mt-1 text-blue-600 mr-4"></i>
-            <p><b>Misi:</b> Memberikan pelatihan bahasa dan etos kerja Jepang yang nyata.</p>
-          </div>
-        </div>
-      </div>
+    <div class="absolute inset-0 z-0">
+        <img src="https://drive.google.com/thumbnail?id=11unpQMJEoXj8LCJQoke0nBbI874-Sgic&sz=w1200" class="w-full h-full object-cover" alt="Background Agira">
+        <div class="absolute inset-0 overlay-hitam"></div>
     </div>
-  </div>
+    <div class="container mx-auto px-6 relative z-10 text-center md:text-left">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Wujudkan Karir Masa Depan <br><span class="text-blue-400">Kerja ke Jepang</span></h1>
+        <p class="text-lg md:text-xl mb-8 max-w-2xl">Lembaga pelatihan Bahasa Jepang dengan metode efektif dan pendampingan persiapan keberangkatan.</p>
+        <a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg transition duration-300">Hubungi Kami Sekarang</a>
+    </div>
 </section>
 
-<!-- PROGRAM -->
+<!-- PROFIL LEMBAGA -->
+<section id="profil" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-wrap items-center">
+            <div class="w-full md:w-1/2 mb-10 md:mb-0">
+                <img src="https://drive.google.com/thumbnail?id=1n64kWFdMsYcX3x6ToNk17dWs-ZuY54Uq&sz=w1000" class="rounded-2xl shadow-2xl border-b-8 border-blue-600" alt="Siswa Agira">
+            </div>
+            <div class="w-full md:w-1/2 md:pl-16">
+                <h2 class="text-3xl font-bold teks-biru-agira mb-6">Tentang LPK Agira Gakkou</h2>
+                <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                    PT. Agira Education Center adalah lembaga pelatihan bahasa Jepang yang berfokus pada persiapan Bahasa Jepang dasar dan Skill sebagai langkah awal kerja ke Jepang melalui Program Magang Swasta (SO) dan Tokutei Ginou (SSW).
+                </p>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="flex items-start">
+                        <i class="fas fa-bullseye mt-1 text-blue-600 mr-4"></i>
+                        <p><b>Visi:</b> Mencetak SDM kompeten dan berkarakter standar Jepang.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-double mt-1 text-blue-600 mr-4"></i>
+                        <p><b>Misi:</b> Memberikan pelatihan bahasa dan etos kerja Jepang yang nyata.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAM PELATIHAN -->
 <section id="program" class="py-20 bg-gray-50">
-<!-- Copy struktur program sebelumnya tanpa perubahan konten -->
+    <!-- kode tetap sama seperti asli -->
 </section>
 
 <!-- FASILITAS -->
 <section id="fasilitas" class="py-20 bg-white">
-<!-- Copy struktur fasilitas sebelumnya tanpa perubahan konten -->
+    <!-- kode tetap sama seperti asli -->
 </section>
 
 <!-- FAQ -->
 <section id="faq" class="py-20 bg-gray-50">
-<!-- Copy struktur FAQ sebelumnya tanpa perubahan konten -->
+    <!-- kode tetap sama seperti asli -->
 </section>
 
-<!-- BROSUR -->
+<!-- DOWNLOAD BROSUR -->
 <section id="brosur" class="py-20 bg-blue-50">
-<!-- Copy struktur brosur sebelumnya tanpa perubahan konten -->
+    <!-- kode tetap sama seperti asli -->
 </section>
 
-<!-- FOOTER / KONTAK -->
+<!-- KONTAK & FOOTER -->
 <footer id="kontak" class="bg-slate-900 text-white py-16">
-<!-- Copy footer sebelumnya tanpa perubahan konten -->
+    <!-- kode tetap sama seperti asli -->
 </footer>
 
-<!-- Tombol WhatsApp -->
+<!-- WA BUTTON -->
 <a href="https://wa.me/qr/EO5M7DKO5VGNB1" class="tombol-wa">
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- JS tambahan: Collapse menu otomatis setelah klik -->
+<!-- JS Hamburger Mobile & Smooth Scroll Collapse -->
 <script>
-document.querySelectorAll('.navbar-nav .nav-link').forEach(function(e){
-  e.addEventListener('click', function(){
-    var navbarToggler = document.querySelector('.navbar-collapse');
-    if(navbarToggler.classList.contains('show')){
-      new bootstrap.Collapse(navbarToggler).toggle();
-    }
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Collapse menu saat klik link
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});
+
+// FAQ toggle (tetap seperti asli)
+const toggles = document.querySelectorAll('.faq-toggle');
+toggles.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const content = btn.nextElementSibling;
+    content.classList.toggle('hidden');
+    btn.querySelector('i').classList.toggle('fa-chevron-down');
+    btn.querySelector('i').classList.toggle('fa-chevron-up');
   });
 });
 </script>
